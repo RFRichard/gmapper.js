@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<style type="text/css">
+  html { height: 100% }
+  body { height: 100%; width: 100%; margin: 0px; padding: 0px; background-color: #000000; }
+  #map_canvas { height: 100%; width: 100%;}
+  
+  .ctrls {
+    height: 42px;
+    color: #ffffff;
+    font-family: arial;
+    font-size: 1em;
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    padding-left: 30%;
+    padding-top: 5px;
+    z-index: 1;
+    opacity: 0.5;
+  }
+  
+  .datadisplay {
+    color: #ffffff;
+    font-family: arial;
+    font-size: 1em;
+    position: absolute;
+    top: 0px;
+    width:100%;
+    height:100px;
+    padding-left: 20px;
+    z-index: 1;
+    background-color: #000000;
+    opacity: 0.5;
+  }
+  
+   .datadisplaytext {
+    color: #ffffff;
+    font-family: arial;
+    font-size: 1em;
+    position: absolute;
+    top: 0px;
+    padding-left: 20px;
+    padding-top: 5px;
+    z-index: 1;
+    opacity: 1;
+  
+  }
+  
+  .lineone {}
+  
+  .linetwo {}
+  
+</style>
+</head>
+<body>
+  <div class="datadisplay" id="overlay_canvas"></div>
+  <div id="overlaytext" class="datadisplaytext">
+    <div class="lineone">
+      <div id="distancetext"></div>
+      <div id="areatext"></div>
+      <div id="circlediametertext"></div>
+    </div>
+    <div class="linetwo">
+      <div id="circlediametertext"></div>
+      <div id="circleareatext"></div>
+    </div>
+  </div>
+  <div id="map_canvas" style=""></div>
+  <div class="ctrls">
+    <img src="img/center1.png" onclick="GMapper.center_selector();"/>
+    <img src="img/measure1.png" onclick="GMapper.label_distances();" />
+    <img src="img/rule1.png" onclick="GMapper.toggle_ruler();" />
+    <img src="img/rulercircle.png" onclick="GMapper.toggle_rulercircle();" />
+    <img src="img/undo1.png" onclick="GMapper.undo();" />
+    <img src="img/redo1.png" onclick="GMapper.redo();" />
+    <img src="img/clear1.png" onclick="GMapper.clearpoints();" />
+    
+    
+  </div>
+</body>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false&libraries=geometry"></script>
+<script type="text/javascript" src="gmapper.js"></script>
+</html>
